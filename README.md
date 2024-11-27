@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+# RBAC Dashboard - VRV Security Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Role-Based Access Control (RBAC) dashboard built with React and Tailwind CSS, featuring user management, role management, and dynamic permissions.
 
-## Available Scripts
+## Features Implemented
 
-In the project directory, you can run:
+- **User Management**
 
-### `npm start`
+  - CRUD operations for users
+  - Role assignment
+  - Status management (Active/Inactive)
+  - Bulk actions with pagination
+  - Search and filtering
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Role Management**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - Role creation and editing
+  - Permission assignment
+  - Role visualization
 
-### `npm test`
+- **Permissions System**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - Dynamic permission matrix
+  - Permission inheritance visualization
+  - Bulk permission updates
 
-### `npm run build`
+- **Additional Features**
+  - Global search
+  - Activity monitoring
+  - Dark theme
+  - Responsive design
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React 18
+- Tailwind CSS
+- shadcn/ui components
+- React Router
+- Context API for state management
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup
 
-### `npm run eject`
+```bash
+# Install dependencies
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Start development server
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+src/
+├── components/
+│   ├── ui/
+│   ├── layout/
+│   ├── modals/
+│   └── search/
+├── context/
+├── pages/
+└── utils/
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Future Enhancements
 
-## Learn More
+1. **Security**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   - Input validation
+   - XSS prevention
+   - CSRF protection
+   - Session management
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Features**
 
-### Code Splitting
+   - Role templates
+   - Advanced permission groups
+   - Audit logging
+   - Export/Import functionality
+   - User session tracking
+   - Two-factor authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Performance**
 
-### Analyzing the Bundle Size
+   - API integration
+   - Caching strategies
+   - Load optimization
+   - Real-time updates
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **UX Improvements**
+   - Drag-and-drop interface
+   - Bulk operations enhancement
+   - Advanced filtering
+   - Custom role creation workflow
 
-### Making a Progressive Web App
+## Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Currently implemented features can be tested:
 
-### Advanced Configuration
+1. User Management:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   - Search functionality
+   - Role/Status filtering
+   - Bulk selection and deletion
+   - Pagination
 
-### Deployment
+2. Role Management:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   - Role creation/editing
+   - Permission assignment
+   - Role hierarchy viewing
 
-### `npm run build` fails to minify
+3. Permissions:
+   - Matrix view
+   - Permission inheritance
+   - Permission toggling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Known Limitations
+
+1. Data persistence (currently using context)
+2. No backend integration
+3. Limited validation
+4. Basic error handling
+
+## Contributing
+
+1. Fork the repository
+2. Create feature branch
+3. Commit changes
+4. Push to branch
+5. Create Pull Request
